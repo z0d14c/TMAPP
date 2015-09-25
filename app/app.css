@@ -2,16 +2,27 @@
 
 body{
     background-color: #E2DADB;
-    color: #DAE2DF;
 }
 .main.container{
     height: 90%;
     margin-top:10%;
+}
+.tasksection{
     background-color: #E2DADB;
+    color: #6D696A;
 }
 .task{
-    background-color: #A2A7A5;
+    background-color: #6D696A;
+    margin: 5px 0 5px 0;
+    height: 100px;
+    color: #DAE2DF;
 }
 .taskcolumn{
-    background-color: #6D696A;
+    background-color: #A2A7A5;
+}
+.titlecolumn{
+    background-color: #E2DADB;
+}
+i.icon{
+    font-size: 2em;
 }

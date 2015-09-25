@@ -1,5 +1,3 @@
-<div class="ui three column doubling grid main container">
-    <task-section></task-section>
-    <task-section></task-section>
-    <task-section></task-section>
+<div class="ui grid three column equal width main container">
+    <task-section ng-repeat="section in taskSections" task-groups="section.taskGroups" category="section.category"></task-section>
 </div>
