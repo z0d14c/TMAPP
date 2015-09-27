@@ -10,7 +10,9 @@
                     taskGroup: '='
                 },
                 link: function (scope, elem, attrs) {
-                    console.log('subsection scope ', scope)
+                    scope.addTask = function() {
+                        $('#' + scope.taskGroup.category + 'addtaskmodal').modal('show');
+                    }
                 }
             }
         });

@@ -4,7 +4,10 @@
         <!--<i class="remove circle icon"></i>-->
     </div>
     <div class="column">
-        <task ng-repeat="task in taskGroup" task="task"></task>
+        <task ng-repeat="task in taskGroup.tasks" task="task"></task>
     </div>
-    <div class="row right floated iconbar"><i class="add circle icon"></i></div>
+    <div class="row right floated iconbar">
+        <i ng-click="addTask()" class="add circle icon"></i>
+    </div>
+    <add-task-modal task-group="taskGroup"></add-task-modal>
 </div>

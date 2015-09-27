@@ -1,3 +1,12 @@
 <div class="ui grid three column equal width main container">
-    <task-section ng-repeat="section in taskSections" task-groups="section.taskGroups" category="section.category"></task-section>
+    <task-section ng-repeat="section in taskSections" task-groups="section.taskGroups"
+                  category="section.category"></task-section>
+    <div class="column three wide">
+        <div class="ui two buttons">
+            <button ng-click="worker()" class="ui button">Log in as Worker1</button>
+            <button ng-click="worker2()" class="ui button">Log in as Worker2</button>
+            <button ng-click="manager()" class="ui button">Log in as Manager</button>
+            <button class="ui button"> curr user: {{currentUser}}</button>
+        </div>
+    </div>
 </div>

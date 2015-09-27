@@ -1,0 +1,23 @@
+<div class="ui modal addtask" id="{{taskGroup.category}}addtaskmodal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Task to {{taskGroup.category}}
+    </div>
+    <form class="ui form" id="">
+        <div class="field">
+            <label>Title</label>
+            <input ng-model="title" type="text" name="title" placeholder="Task Name">
+        </div>
+        <div class="field">
+            <label>Assignee</label>
+            <select ng-model="owners" ng-options="value as value for (key, value) in users"></select>
+        </div>
+        <div class="field">
+            <input ng-model="description" type="text" name="description" placeholder="Task Description">
+        </div>
+    </form>
+    <div class="actions">
+        <div class="ui button" ng-click="closeModals()">Cancel</div>
+        <div class="ui button" ng-click="setTask()">Add Task</div>
+    </div>
+</div>

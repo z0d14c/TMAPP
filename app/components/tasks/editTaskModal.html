@@ -1,0 +1,37 @@
+<div class="ui modal edittask" id="{{task.id}}edittaskmodal">
+    <i class="close icon"></i>
+    <div class="header">
+        Task: {{task.title}}
+    </div>
+    <form class="ui form" id="">
+        <div class="field">
+            <label>Title</label>
+            <input ng-model="task.title" type="text" name="title" placeholder="Task Name">
+        </div>
+        <div class="field">
+            <label>Status</label>
+            <select ng-model="status" ng-options="o for o in statusOptions track by o"></select>
+        </div>
+        <div class="field">
+            <label>Assignee</label>
+            <select ng-model="task.owners" ng-options="o for o in $root.users track by o"></select>
+        </div>
+        <div class="field">
+            <input ng-model="task.description" type="text" name="description" placeholder="Task Description">
+        </div>
+        <div class="field">
+            <label>Comments</label>
+            <div ng-repeat="comment in task.comments">
+                <span>{{comment.author}} : {{comment.text}}</span> <br>
+            </div>
+        </div>
+        <div class="field">
+            <label>Add New Comment</label>
+            <input type="text" ng-model="comment">
+        </div>
+    </form>
+    <div class="actions">
+        <div class="ui button" ng-click="cancel()">Cancel</div>
+        <div class="ui button" ng-click="setTask()">Save Changes</div>
+    </div>
+</div>

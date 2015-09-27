@@ -10,4 +10,8 @@ angular.module('myApp', [
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/view1'});
-    }]);
+    }]).run(["$rootScope",
+    function ($rootScope) {
+        $rootScope.users = ['worker1', 'worker2', 'manager']
+        $rootScope.currentUser = 'manager';
+    }] );
